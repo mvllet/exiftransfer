@@ -30,9 +30,22 @@
 		EF37D4822FB3382100515279 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EF69F65F2FB35CBC00C586F9 /* Exceptions for "exiftransfer" folder in "Exif Transfer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = EF37D3962FB32F2E00515279 /* Exif Transfer */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		EF37D3992FB32F2E00515279 /* exiftransfer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EF69F65F2FB35CBC00C586F9 /* Exceptions for "exiftransfer" folder in "Exif Transfer" target */,
+			);
 			path = exiftransfer;
 			sourceTree = "<group>";
 		};
@@ -109,7 +122,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2640;
-				LastUpgradeCheck = 2640;
+				LastUpgradeCheck = 2650;
 				TargetAttributes = {
 					EF37D3962FB32F2E00515279 = {
 						CreatedOnToolsVersion = 26.4.1;
@@ -190,6 +203,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 2X2FX9G26N;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -215,6 +229,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -254,6 +269,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2X2FX9G26N;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -272,6 +288,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -284,6 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 2X2FX9G26N;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -293,6 +311,7 @@
 					"$(PROJECT_DIR)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = exiftransfer/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Exif Transfer";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Mullet. All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -321,6 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 2X2FX9G26N;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -330,6 +350,7 @@
 					"$(PROJECT_DIR)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = exiftransfer/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Exif Transfer";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Mullet. All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
