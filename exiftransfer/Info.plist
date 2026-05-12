@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SUFeedURL</key>
+	<string>https://mvllet.dev/exiftransfer/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>GAA1/Wy+GH8YJ/weu3h4O4yNEeI15j6NlYsLMxWKYNY=</string>
+</dict>
+</plist>
