@@ -138,19 +138,24 @@ struct ExifToolService {
     }
 
     private func resolvedExifToolURL() -> URL? {
-        let candidates = [
-            "/opt/homebrew/bin/exiftool",
-            "/usr/local/bin/exiftool",
-            "/usr/bin/exiftool"
-        ]
+        let process = Process()
+        process.executableURL = URL(fileURLWithPath: "/usr/bin/env")
+        process.arguments = ["which", "exiftool"]
 
-        for path in candidates {
-            if FileManager.default.isExecutableFile(atPath: path) {
-                return URL(fileURLWithPath: path)
-            }
+        let pipe = Pipe()
+        process.standardOutput = pipe
+
+        do {
+            try process.run()
+            process.waitUntilExit()
+            guard process.terminationStatus == 0 else { return nil }
+            let data = pipe.fileHandleForReading.readDataToEndOfFile()
+            let path = String(data: data, encoding: .utf8)?
+                .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            return path.isEmpty ? nil : URL(fileURLWithPath: path)
+        } catch {
+            return nil
         }
-
-        return nil
     }
 
     nonisolated private static func readPipeText(_ pipe: Pipe) -> String {
