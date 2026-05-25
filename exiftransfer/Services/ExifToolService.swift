@@ -138,6 +138,17 @@ struct ExifToolService {
     }
 
     private func resolvedExifToolURL() -> URL? {
+        let candidates = [
+            "/opt/homebrew/bin/exiftool",
+            "/usr/local/bin/exiftool",
+        ]
+
+        for path in candidates {
+            if FileManager.default.isExecutableFile(atPath: path) {
+                return URL(fileURLWithPath: path)
+            }
+        }
+
         let process = Process()
         process.executableURL = URL(fileURLWithPath: "/usr/bin/env")
         process.arguments = ["which", "exiftool"]
