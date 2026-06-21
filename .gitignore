@@ -1,6 +1,3 @@
-# Project
-Sparkle.framework
-
 # macOS
 .DS_Store
 
@@ -11,25 +8,20 @@ Sparkle.framework
 *.swo
 *.bak
 *.old
-
-# VSCode / Cursor
-.vscode/
-.cursor/
+*~
 
 # XCode
-DerivedData/
-*.xcworkspace
-*.xcodeproj/project.xcworkspace/
-*.xcuserstate
 *.xcuserdatad/
+*.xccheckout
+*.xcbkptlist
+build/
+DerivedData/
 *.moved-aside
-*.pbxuser
-*.mode1v3
-*.mode2v3
-*.perspectivev3
-.build/
-Packages/
-.swiftpm/xcode/package.resolved
+*.mo
+*.spec
+*.ipa
+*.dSYM*
 Pods/
-Podfile.lock
-Carthage/Build/
+.build/
+.swiftpm/
+Carthage/
