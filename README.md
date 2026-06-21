@@ -1,30 +1,25 @@
 # Exif Transfer
 
-macOS utility that copies EXIF metadata from one image to another.
+A native macOS app for copying EXIF metadata from one image to another. Built with SwiftUI.
 
 ## Prerequisites
 
-- [exiftool](https://exiftool.org) - install via Homebrew: `brew install exiftool`
+**Dependencies**
+- exiftool support (https://exiftool.org)
+- Homebrew installation via `brew install exiftool`
 
 ## Usage
 
-1. Drag a source image (with EXIF data) onto the left drop zone.
-2. Drag a target image onto the right drop zone.
-3. Click **Transfer Metadata**.
+**Workflow**
+- Left drop zone for source images with EXIF data
+- Right drop zone for target images
+- One-click Transfer Metadata action
 
-### Modes
+**Modes**
+- Direct overwrite to write metadata directly to the target file
+- Copy to Downloads to create a dated copy in `~/Downloads` before writing
 
-- **Direct overwrite**: writes metadata directly to the target file.
-- **Copy to Downloads**: creates a dated copy in `~/Downloads` before writing.
+## Technical Architecture
 
-## Build
-
-Open `exiftransfer.xcodeproj` in Xcode 26+ and run.
-
-## License
-
-#### Copyright (c) 2026 Mullet. All rights reserved.
-
-This software is provided for personal or internal use.
-- **Prohibited**: Commercial sale, redistribution, or integration into other commercial projects without express written permission from **Mullet**.
-- See the `LICENSE` file for full details.
+- Built with Swift 6 and modern concurrency
+- Supports macOS 15 Sequoia through macOS 27 Golden Gate
