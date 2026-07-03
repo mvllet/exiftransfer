@@ -3,9 +3,17 @@
 import SwiftUI
 import Sparkle
 
+// Quit app when last window closes
+final class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        true
+    }
+}
+
 @main
 @MainActor
 struct exiftransferApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @StateObject private var viewModel = AppViewModel()
     private let updaterController: SPUStandardUpdaterController
 
