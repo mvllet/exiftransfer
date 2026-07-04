@@ -41,7 +41,7 @@ struct SettingsView: View {
             }
         }
         .formStyle(.grouped)
-        .frame(width: 400)
+        .frame(width: 380)
         .fixedSize(horizontal: false, vertical: true)
         .sheet(isPresented: $showChangelog) {
             ChangelogView()

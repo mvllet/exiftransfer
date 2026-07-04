@@ -7,8 +7,8 @@ struct ContentView: View {
     @ObservedObject var viewModel: AppViewModel
 
     var body: some View {
-        VStack(spacing: 18) {
-            HStack(spacing: 18) {
+        VStack(spacing: 12) {
+            HStack(spacing: 16) {
                 ImageDropZoneView(
                     title: "Source",
                     role: .source,
@@ -23,15 +23,16 @@ struct ContentView: View {
                     onDropItems: viewModel.handleDrop
                 )
             }
-            .frame(maxWidth: .infinity)
-            .frame(maxHeight: 440)
 
-            VStack(spacing: 12) {
-                statusView
-                
+            statusView
+                .padding(.bottom, 8)
+
+            HStack {
                 Toggle("Direct Overwrite", isOn: $viewModel.directOverwrite)
                     .toggleStyle(.switch)
                     .controlSize(.mini)
+
+                Spacer()
 
                 Button {
                     Task {
@@ -48,9 +49,10 @@ struct ContentView: View {
                 .buttonStyle(.borderedProminent)
                 .disabled(!viewModel.canTransfer)
             }
-            .frame(maxWidth: .infinity)
         }
         .padding(16)
+        .frame(width: 400)
+        .fixedSize(horizontal: false, vertical: true)
     }
 
     @ViewBuilder

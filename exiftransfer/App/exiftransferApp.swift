@@ -28,9 +28,10 @@ struct exiftransferApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(viewModel: viewModel)
-                .frame(minWidth: 400, minHeight: 300)
         }
+        .windowResizability(.contentSize)
         .commands {
+            CommandGroup(replacing: .newItem) { }
             CommandGroup(after: .appInfo) {
                 Button("Check for updates …") {
                     updaterController.checkForUpdates(nil)
