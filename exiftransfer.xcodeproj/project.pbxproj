@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF4081DE30920B2700582DC8 /* exiftool-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF4081DB30920B2700582DC8 /* exiftool-LICENSE.txt */; };
+		EF4081DF30920B2700582DC8 /* Sparkle-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF4081DC30920B2700582DC8 /* Sparkle-LICENSE.txt */; };
+		EF4081E030920B2700582DC8 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EF4081DA30920B2700582DC8 /* LICENSE */; };
 		EFA752322FE86C56008E59D6 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = EFA752312FE86C56008E59D6 /* Sparkle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EF37D3972FB32F2E00515279 /* Exif Transfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exif Transfer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4081D930920AC000582DC8 /* Exif Transfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Exif Transfer.app"; path = "/Users/mtmuliot/Documents/Code/exiftransfer/build/Debug/Exif Transfer.app"; sourceTree = "<absolute>"; };
+		EF4081DA30920B2700582DC8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		EF4081DB30920B2700582DC8 /* exiftool-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "exiftool-LICENSE.txt"; sourceTree = "<group>"; };
+		EF4081DC30920B2700582DC8 /* Sparkle-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Sparkle-LICENSE.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -49,16 +55,18 @@
 			isa = PBXGroup;
 			children = (
 				EF37D3992FB32F2E00515279 /* exiftransfer */,
-				EF37D3982FB32F2E00515279 /* Products */,
+				EF4081DA30920B2700582DC8 /* LICENSE */,
+				EF4081DD30920B2700582DC8 /* licenses */,
 			);
 			sourceTree = "<group>";
 		};
-		EF37D3982FB32F2E00515279 /* Products */ = {
+		EF4081DD30920B2700582DC8 /* licenses */ = {
 			isa = PBXGroup;
 			children = (
-				EF37D3972FB32F2E00515279 /* Exif Transfer.app */,
+				EF4081DB30920B2700582DC8 /* exiftool-LICENSE.txt */,
+				EF4081DC30920B2700582DC8 /* Sparkle-LICENSE.txt */,
 			);
-			name = Products;
+			path = licenses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,7 +90,7 @@
 				EFA752312FE86C56008E59D6 /* Sparkle */,
 			);
 			productName = exiftransfer;
-			productReference = EF37D3972FB32F2E00515279 /* Exif Transfer.app */;
+			productReference = EF4081D930920AC000582DC8 /* Exif Transfer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,7 +121,7 @@
 				EFA752302FE86C56008E59D6 /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			preferredProjectObjectVersion = 100;
-			productRefGroup = EF37D3982FB32F2E00515279 /* Products */;
+			productRefGroup = EF37D38E2FB32F2E00515279;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -126,6 +134,9 @@
 		EF37D3952FB32F2E00515279 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				EF4081DE30920B2700582DC8 /* exiftool-LICENSE.txt in Resources */,
+				EF4081DF30920B2700582DC8 /* Sparkle-LICENSE.txt in Resources */,
+				EF4081E030920B2700582DC8 /* LICENSE in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */
@@ -267,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 5;
@@ -306,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 5;
