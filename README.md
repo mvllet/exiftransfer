@@ -5,7 +5,7 @@ A native macOS app for copying EXIF metadata from one image to another. Built wi
 ## Prerequisites
 
 **Dependencies**
-- exiftool support (https://exiftool.org)
+- exiftool (https://exiftool.org)
 - Homebrew installation via `brew install exiftool`
 
 ## Usage
@@ -22,4 +22,4 @@ A native macOS app for copying EXIF metadata from one image to another. Built wi
 ## Technical Architecture
 
 - Built with Swift 6 and modern concurrency
-- Supports macOS 15 Sequoia through macOS 27 Golden Gate
+- Supports macOS 14 Sonoma through macOS 27 Golden Gate

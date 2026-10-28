@@ -20,8 +20,6 @@ enum TransferMode {
 
 struct ExifToolRunOutput {
     let destinationURL: URL
-    let standardOutput: String
-    let standardError: String
 }
 
 enum TransferError: LocalizedError, Equatable {

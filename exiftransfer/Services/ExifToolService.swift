@@ -95,20 +95,18 @@ struct ExifToolService {
             process.standardError = standardErrorPipe
 
             process.terminationHandler = { terminatedProcess in
-                let standardOutput = Self.readPipeText(standardOutputPipe)
-                let standardError = Self.readPipeText(standardErrorPipe)
-
                 if terminatedProcess.terminationStatus == 0 {
+                    _ = Self.readPipeText(standardOutputPipe)
+                    _ = Self.readPipeText(standardErrorPipe)
+
                     continuation.resume(
                         returning: .success(
-                            ExifToolRunOutput(
-                                destinationURL: destinationURL,
-                                standardOutput: standardOutput,
-                                standardError: standardError
-                            )
+                            ExifToolRunOutput(destinationURL: destinationURL)
                         )
                     )
                 } else {
+                    let standardOutput = Self.readPipeText(standardOutputPipe)
+                    let standardError = Self.readPipeText(standardErrorPipe)
                     let message = standardError.isEmpty
                         ? standardOutput
                         : standardError
