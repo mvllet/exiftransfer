@@ -1,47 +1,49 @@
-// SettingsView.swift
-
 import Sparkle
 import SwiftUI
 
-// Settings window with Sparkle update controls and changelog sheet.
 struct SettingsView: View {
-    @StateObject private var viewModel: SettingsViewModel
+    @State private var viewModel: SettingsViewModel
     @State private var showChangelog = false
 
     init(updater: SPUUpdater) {
-        _viewModel = StateObject(
-            wrappedValue: SettingsViewModel(updater: updater)
+        _viewModel = State(
+            initialValue: SettingsViewModel(updater: updater)
         )
     }
 
     var body: some View {
         Form {
             Section("Updates") {
-                Toggle("Check for updates automatically", isOn: $viewModel.automaticallyChecksForUpdates)
-                    .onChange(of: viewModel.automaticallyChecksForUpdates) { _, newValue in
-                        viewModel.setAutomaticallyChecksForUpdates(newValue)
+                Toggle("Check for updates on launch", isOn: $viewModel.checksForUpdatesOnLaunch)
+                    .onChange(of: viewModel.checksForUpdatesOnLaunch) { _, newValue in
+                        viewModel.setChecksForUpdatesOnLaunch(newValue)
                     }
 
-                Toggle("Automatically download and install updates", isOn: $viewModel.automaticallyDownloadsUpdates)
-                    .disabled(!viewModel.automaticallyChecksForUpdates)
+                Toggle("Automatically download & install updates", isOn: $viewModel.automaticallyDownloadsUpdates)
                     .onChange(of: viewModel.automaticallyDownloadsUpdates) { _, newValue in
                         viewModel.setAutomaticallyDownloadsUpdates(newValue)
                     }
-
-                Button("Check Now") {
-                    viewModel.checkForUpdates()
+                
+                HStack {
+                    Spacer()
+                    Button("Check Now") {
+                        viewModel.checkForUpdates()
+                    }
                 }
             }
 
             Section("About") {
-                LabeledContent("Version", value: appVersion)
-                Button("What's New") {
-                    showChangelog = true
+                HStack {
+                    Text("Version \(appVersion)")
+                    Spacer()
+                    Button("What's New") {
+                        showChangelog = true
+                    }
                 }
             }
         }
         .formStyle(.grouped)
-        .frame(width: 380)
+        .frame(width: 360)
         .fixedSize(horizontal: false, vertical: true)
         .sheet(isPresented: $showChangelog) {
             ChangelogView()
@@ -51,4 +53,5 @@ struct SettingsView: View {
     private var appVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
     }
+
 }

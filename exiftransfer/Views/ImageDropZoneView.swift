@@ -1,10 +1,7 @@
-// ImageDropZoneView.swift
-
 import AppKit
 import SwiftUI
 import UniformTypeIdentifiers
 
-// Square drop zone with preview and visual drop feedback.
 struct ImageDropZoneView: View {
     let title: String
     let role: DropRole

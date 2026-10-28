@@ -1,8 +1,5 @@
-// ExifToolService.swift
-
 import Foundation
 
-// Executes exiftool asynchronously and encapsulates process and file errors.
 struct ExifToolService {
     func transferMetadata(
         from sourceURL: URL,

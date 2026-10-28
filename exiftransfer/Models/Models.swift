@@ -1,9 +1,6 @@
-// Models.swift
-
 import AppKit
 import Foundation
 
-// Common model types for drop, transfer, and error messages.
 enum DropRole {
     case source
     case target

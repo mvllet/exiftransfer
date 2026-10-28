@@ -1,12 +1,9 @@
-// AppViewModel.swift
-
 import AppKit
 import Combine
 import Foundation
 import SwiftUI
 import UniformTypeIdentifiers
 
-// MainActor-ViewModel for drop zones, transfer, status and animation.
 @MainActor
 final class AppViewModel: ObservableObject {
     @Published var sourceSlot = ImageSlotState()
@@ -55,7 +52,7 @@ final class AppViewModel: ObservableObject {
         }
 
         isTransferring = true
-        status = .ready("Metadata is transferred …")
+        status = .ready("Metadata has been transferred …")
 
         let mode: TransferMode = directOverwrite ? .directOverwrite : .copyToDownloads
         let result = await service.transferMetadata(from: sourceURL, to: targetURL, mode: mode)

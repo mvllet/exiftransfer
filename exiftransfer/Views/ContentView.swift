@@ -1,8 +1,5 @@
-// ContentView.swift
-
 import SwiftUI
 
-// Main window with two equal-sized drop zones and transfer controls.
 struct ContentView: View {
     @ObservedObject var viewModel: AppViewModel
 
