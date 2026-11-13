@@ -7,7 +7,7 @@ struct ChangelogView: View {
     @State private var isLoading = true
     @State private var loadFailed = false
 
-    private let changelogURL = URL(string: "https://mvllet.dev/exiftransfer/changelog.md")!
+    private let changelogURL = URL(string: "https://mvllet.dev/exiftransfer/CHANGELOG.md")!
 
     var body: some View {
         VStack(spacing: 0) {
@@ -50,7 +50,7 @@ struct ChangelogView: View {
 
         if let data = try? await URLSession.shared.data(from: changelogURL).0 {
             markdown = String(decoding: data, as: UTF8.self)
-        } else if let url = Bundle.main.url(forResource: "changelog", withExtension: "md"),
+        } else if let url = Bundle.main.url(forResource: "CHANGELOG", withExtension: "md"),
                   let content = try? String(contentsOf: url, encoding: .utf8) {
             markdown = content
         }

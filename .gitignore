@@ -1,7 +1,27 @@
 # macOS
 .DS_Store
 
-# Misc
+# Xcode user files
+*.xcuserdatad/
+*.xccheckout
+*.xcbkptlist
+*.moved-aside
+
+# Build output
+*.mo
+*.spec
+*.ipa
+*.dSYM*
+build/
+DerivedData/
+
+# Dependencies
+Pods/
+.build/
+.swiftpm/
+Carthage/
+
+# Editor and temporary files
 *.log
 *.tmp
 *.swp
@@ -10,18 +30,6 @@
 *.old
 *~
 
-# XCode
-*.xcuserdatad/
-*.xccheckout
-*.xcbkptlist
-build/
-DerivedData/
-*.moved-aside
-*.mo
-*.spec
-*.ipa
-*.dSYM*
-Pods/
-.build/
-.swiftpm/
-Carthage/
+# Private
+private/
+sparkle/

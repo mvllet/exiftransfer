@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF4081E030920B2700582DC8 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EF4081DA30920B2700582DC8 /* LICENSE */; };
-		EF4081E230920BCA00582DC8 /* exiftool-LICENSE.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF4081DB30920B2700582DC8 /* exiftool-LICENSE.txt */; };
-		EF4081E330920BCA00582DC8 /* Sparkle-LICENSE.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF4081DC30920B2700582DC8 /* Sparkle-LICENSE.txt */; };
+		EFA1F66930A771330035C1E9 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EFA1F66630A771330035C1E9 /* LICENSE */; };
+		EFA1F66A30A771330035C1E9 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = EFA1F66530A771330035C1E9 /* CHANGELOG.md */; };
+		EFA1F66B30A771330035C1E9 /* LICENSE-Sparkle in Resources */ = {isa = PBXBuildFile; fileRef = EFA1F66830A771330035C1E9 /* LICENSE-Sparkle */; };
+		EFA1F66C30A771330035C1E9 /* LICENSE-exiftool in Resources */ = {isa = PBXBuildFile; fileRef = EFA1F66730A771330035C1E9 /* LICENSE-exiftool */; };
 		EFA752322FE86C56008E59D6 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = EFA752312FE86C56008E59D6 /* Sparkle */; };
 /* End PBXBuildFile section */
 
@@ -19,17 +20,16 @@
 			dstPath = licenses;
 			dstSubfolder = Resources;
 			files = (
-				EF4081E230920BCA00582DC8 /* exiftool-LICENSE.txt in CopyFiles */,
-				EF4081E330920BCA00582DC8 /* Sparkle-LICENSE.txt in CopyFiles */,
 			);
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EF4081DA30920B2700582DC8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		EF4081DB30920B2700582DC8 /* exiftool-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "exiftool-LICENSE.txt"; sourceTree = "<group>"; };
-		EF4081DC30920B2700582DC8 /* Sparkle-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Sparkle-LICENSE.txt"; sourceTree = "<group>"; };
-		EF4082D13092111C00582DC8 /* Exif Transfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exif Transfer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4082D13092111C00582DC8 /* Exif Transfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Exif Transfer.app"; path = "/Users/mtmuliot/Documents/Code/exiftransfer/build/Debug/Exif Transfer.app"; sourceTree = "<absolute>"; };
+		EFA1F66530A771330035C1E9 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		EFA1F66630A771330035C1E9 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		EFA1F66730A771330035C1E9 /* LICENSE-exiftool */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LICENSE-exiftool"; sourceTree = "<group>"; };
+		EFA1F66830A771330035C1E9 /* LICENSE-Sparkle */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LICENSE-Sparkle"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -67,19 +67,11 @@
 			isa = PBXGroup;
 			children = (
 				EF37D3992FB32F2E00515279 /* exiftransfer */,
-				EF4081DA30920B2700582DC8 /* LICENSE */,
-				EF4081DD30920B2700582DC8 /* licenses */,
-				EF4082D13092111C00582DC8 /* Exif Transfer.app */,
+				EFA1F66530A771330035C1E9 /* CHANGELOG.md */,
+				EFA1F66630A771330035C1E9 /* LICENSE */,
+				EFA1F66730A771330035C1E9 /* LICENSE-exiftool */,
+				EFA1F66830A771330035C1E9 /* LICENSE-Sparkle */,
 			);
-			sourceTree = "<group>";
-		};
-		EF4081DD30920B2700582DC8 /* licenses */ = {
-			isa = PBXGroup;
-			children = (
-				EF4081DB30920B2700582DC8 /* exiftool-LICENSE.txt */,
-				EF4081DC30920B2700582DC8 /* Sparkle-LICENSE.txt */,
-			);
-			path = licenses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +140,10 @@
 		EF37D3952FB32F2E00515279 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
-				EF4081E030920B2700582DC8 /* LICENSE in Resources */,
+				EFA1F66A30A771330035C1E9 /* CHANGELOG.md in Resources */,
+				EFA1F66930A771330035C1E9 /* LICENSE in Resources */,
+				EFA1F66B30A771330035C1E9 /* LICENSE-Sparkle in Resources */,
+				EFA1F66C30A771330035C1E9 /* LICENSE-exiftool in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */
@@ -307,7 +302,7 @@
 				INFOPLIST_FILE = exiftransfer/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Exif Transfer";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Mullet. Licensed under GPL-3.0.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Mullet.\nLicensed under GPL-3.0.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -347,7 +342,7 @@
 				INFOPLIST_FILE = exiftransfer/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Exif Transfer";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Mullet. Licensed under GPL-3.0.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Mullet.\nLicensed under GPL-3.0.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
